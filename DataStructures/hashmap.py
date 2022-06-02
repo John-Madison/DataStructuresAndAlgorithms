@@ -6,7 +6,7 @@ class HashMap:
 		self.count = 0 
 
 	def table_index(self, key):
-		return hash(key) % self.table_size
+		return abs(hash(key)) % self.table_size
 
 	def find(self, key):
 		table_loc = self.table_index(key)
